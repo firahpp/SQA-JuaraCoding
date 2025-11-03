@@ -1,45 +1,46 @@
 package com.juaracoding.labs;
 
+import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
 
-public class App {
-    public static void main(String[] args) {
-      /**
-       * Implicit casting (casting otomatis)
-       */
-      // int i = 124_000_000; // kapasitas int di i, ukurannya lebih kecil dari kapasitas long di l.
-      // long l = i;
+public class App 
+{
+    public static int getRandomPrice(){
+       // return ThreadLocalRandom.current().nextInt(100, 1000) * 1000; atau
 
-      // System.out.println(i);
-      // System.out.println(l);
-
-      // /**
-      //  * Explicit casting
-      //  */
-      // short s = 100;
-      // byte b = (byte) s;
-      // System.out.println(s);
-      // System.out.println(b);
-
-      // int num1 = 10;
-      // int num2 = 20;
-      // double num3 = num1 / (double) num2;
-      // System.out.println(num3);
-
-      // int num4 = num1%3;
-      // System.out.println(num4);
-
-      // increment
-      // int x = 10;
-      // System.out.println(x++); // Pakai Dulu x nya, Baru Tambah x nya dengan 1
-
-      // int c = 1;
-      // System.out.println(++c); // Tambah dulu c nya, baru pakai (cetak)
-      // System.out.println(x);
-
-      int total = 140_000;
-      double discount = (double) 10/100;
-      double hargaPotongan = total * discount;
-      double hargaBayar = total - hargaPotongan;
-      System.out.println(hargaBayar);
+         int hargaAwalAcak = ThreadLocalRandom.current().nextInt(100, 1000); //ambil angka random
+         int hargaBulatPasti = hargaAwalAcak * 1000;
+        return hargaBulatPasti;
+         
     }
+    public static void main(String[] args) {
+        // int total = 140_000;
+        // double discount = (double) 10/100;
+        // double hargaPotongan = total * discount;
+        // double hargaBayar = total - hargaPotongan;
+        // System.out.println(hargaBayar);
+
+
+        int hargaTotal =  getRandomPrice();
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Harga Total: " + hargaTotal);
+
+        System.out.print("Masukkan nama: ");
+        String namaCustomer = scanner.nextLine();
+        System.out.println("Nama customer adalah " + namaCustomer);
+
+        //input discount
+        System.out.print("Masukkan diskon: ");
+        double diskon = scanner.nextDouble();
+        diskon = diskon/100;
+        double hargaPotongan = hargaTotal * diskon;
+        System.out.println("Diskon "+ (diskon*100) + "%");
+        System.out.println("Harga diskon : " + hargaPotongan);
+
+        double hargaBayar = hargaTotal - hargaPotongan;
+        System.out.println("Perlu di bayar = " + hargaBayar);
+    }
+
 }
