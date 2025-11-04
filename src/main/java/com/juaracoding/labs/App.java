@@ -4,45 +4,38 @@ package com.juaracoding.labs;
 public class App {
 
   public static void main(String[] args) throws Exception {
-    int today = 3;
-    String task = "";
+   
+     String namaPelanggan = "Citra Lestari";
+        String item = "Kopi Robusta 500gr";
+        int jumlah = 2;
+        int hargaSatuan = 120_000;
+        int total = jumlah * hargaSatuan;
 
-    /*
-     * 1-5 : weekday
-     * 6-7 : weekend
-     */
-    switch (today) {
-      case 1:
-          
-          break;
-      case 2:
-          task = "Development";
-          break;
-      case 3:
-          task = "QA Test";
-          
-          break;
-      case 4:
-          task = "QA Test";
-          //System.out.println("Wednesday");
-          break;
-      case 5:
-          task = "Deployment";
-          //System.out.println("Thursday");
-          break;
-      case 6:
-         
-          break;
-      case 7:
-          
-          break;
-      default:
-          task = "Invalid Task";
-          break;
-    }
-    System.out.println(task);
+        // Pakai Text Blocks (tanda kutip tiga kali) + .formatted()
+        String struk = """
+            ==================================
+                 MINI MARKET JAYA ABADI
+            ==================================
+            Kode Transaksi: TRX%04d
+            Pelanggan : %s
+            
+            Item      : %s
+            Jumlah    : %d
+            Harga     : Rp %,d
+            ----------------------------------
+            TOTAL     : Rp %,d
+            
+            Terima kasih!
+            ==================================
+            """.formatted(
+            50,
+            namaPelanggan, 
+                          item, 
+                          jumlah, 
+                          hargaSatuan, 
+                          total);
 
-    
+        System.out.println(struk);
   
     
 
