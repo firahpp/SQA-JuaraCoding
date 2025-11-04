@@ -1,3 +1,5 @@
+//looping
+
 package com.juaracoding.labs;
 
 
@@ -5,21 +7,19 @@ public class App {
 
   public static void main(String[] args) throws Exception {
    
-     String namaPelanggan = "Citra Lestari";
-        String item = "Kopi Robusta 500gr";
+    for (int i = 1; i <= 5; i++) {
+
         int jumlah = 2;
-        int hargaSatuan = 120_000;
+        int hargaSatuan = 120_000 * i;
         int total = jumlah * hargaSatuan;
 
-        // Pakai Text Blocks (tanda kutip tiga kali) + .formatted()
         String struk = """
-            ==================================
+           ==================================
                  MINI MARKET JAYA ABADI
             ==================================
-            Kode Transaksi: TRX%04d
-            Pelanggan : %s
+            Nomor Transaksi : TRX%04d
+            No. Pelanggan : CST%04d
             
-            Item      : %s
             Jumlah    : %d
             Harga     : Rp %,d
             ----------------------------------
@@ -27,17 +27,14 @@ public class App {
             
             Terima kasih!
             ==================================
-            """.formatted(
-            50,
-            namaPelanggan, 
-                          item, 
-                          jumlah, 
-                          hargaSatuan, 
-                          total);
 
-        System.out.println(struk);
-  
-    
-
+          """.formatted(i, i, i, hargaSatuan, total);
+          System.out.println(struk);
+  }
+ 
+/*
+ * sebelum loopingnya dijalankan, i = 1 dijalankan terlebih dahulu
+ * 
+ */
   }
 }
