@@ -1,40 +1,37 @@
-//looping
-
 package com.juaracoding.labs;
 
-
 public class App {
-
   public static void main(String[] args) throws Exception {
-   
-    for (int i = 1; i <= 5; i++) {
+    int i = 1;
+    while (i <= 5) {
+      System.out.println(i);
+      i++;
+    }
 
-        int jumlah = 2;
-        int hargaSatuan = 120_000 * i;
-        int total = jumlah * hargaSatuan;
+    do {
+      System.out.println("Ini dari do while, jalan dulu, dicek belakangan!");
+      i++;
+    } while(i <= 5);
 
-        String struk = """
-           ==================================
-                 MINI MARKET JAYA ABADI
-            ==================================
-            Nomor Transaksi : TRX%04d
-            No. Pelanggan : CST%04d
-            
-            Jumlah    : %d
-            Harga     : Rp %,d
-            ----------------------------------
-            TOTAL     : Rp %,d
-            
-            Terima kasih!
-            ==================================
+    int y = 0;
+    while (true) {
+      System.out.println(y);
+      y++;
+      if (y > 5) {
+        break;
+      }
 
-          """.formatted(i, i, i, hargaSatuan, total);
-          System.out.println(struk);
-  }
- 
-/*
- * sebelum loopingnya dijalankan, i = 1 dijalankan terlebih dahulu
- * 
- */
+    }
+
+    int x = 0;
+
+    while (x <= 10) {
+      x++;
+      if (x % 2 != 0) { //angka genap yg habis dibagi 2 maka akan dicetak
+        continue; //kalo angka ganjil maka tidak di cetak
+      }
+      System.out.println(x);
+    }
   }
 }
+ 
