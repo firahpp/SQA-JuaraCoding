@@ -1,19 +1,28 @@
 package com.juaracoding.labs;
 
+import java.util.Arrays;
+
 public class App {
   public static void main(String[] args) throws Exception {
-    int[][] map = {
-      { 1, 10, 5, 4 },
-      { 4, 6, 4, 7 },
-    };
+   int[][] belanja = {
+    {10, 10000, 0, 15000, 0},
+    {23, 24000, 0, 5000, 0},
+    {11, 14000, 0, 0, 0}
+   };
+   
+   int i = 0;
+    int total = 0;
 
-    for (int[] row: map ) {
-      for (int col: row) {
-        System.out.println(col);
-      }
+    for (int[] items: belanja) {
+      belanja[i][2] = items[0] * items[1];
+      belanja[i][4] = belanja[i][2] - items[3]; 
+      total = total + belanja[i][4];
+      i++;
     }
 
-    
+    System.out.println("Data Belanja : " + Arrays.deepToString(belanja));
+    System.out.println("Total Rp. " + total);
+
   }
 }
   
