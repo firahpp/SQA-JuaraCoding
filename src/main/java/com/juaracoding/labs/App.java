@@ -38,10 +38,30 @@ public class App {
     pesanan001.setCustomer(customer);
     
     //detail pesanan
-    DetailPesanan detailPesanan = new DetailPesanan();
-    detailPesanan.setBarang(barang);
-    detailPesanan.setBarang(barang002);
-    detailPesanan.setPesanan(pesanan001);
+    DetailPesanan detailPesananBarang01 = new DetailPesanan();
+    detailPesananBarang01.setBarang(barang);
+    detailPesananBarang01.setPesanan(pesanan001);
+
+    DetailPesanan detailPesananBarang02 = new DetailPesanan();
+    detailPesananBarang02.setBarang(barang);
+    detailPesananBarang02.setPesanan(pesanan001);
+
+    DetailPesanan[] listTransaksi = {
+      detailPesananBarang01,
+      detailPesananBarang02
+    };
+
+    //perhitungan total detail pesanan
+    for (DetailPesanan detailPesanan: listTransaksi) {
+      int hargaBarang = detailPesanan.getBarang().getHarga();
+      int qty = detailPesanan.getQty();
+      detailPesanan.setSubtotal(hargaBarang*qty);
+      detailPesanan.getPesanan().setTotal(detailPesanan.getSubtotal());
+    }
+
+    System.out.println("Customer: " + pesanan001.getCustomer().getNamaCustomer());
+    System.out.println("Total: " + pesanan001.getTotal());
+  
   }
 }
   
