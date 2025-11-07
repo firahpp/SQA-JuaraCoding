@@ -21,13 +21,27 @@ public class App {
 
     System.out.println("Bill Cash: " + cash.getBill());
     System.out.println("Bill Cash Is Paid? : " + cash.isPaid());
+    System.out.println("Change Cash  : " + cash.getChange());
 
     DownPayment dp = new DownPayment("PAY-002", 120000, false);
 
-    //pembayaran pertama
+    // //pembayaran pertama
+    // dp.pay(60000);
+    // System.out.println("Bill DP: " + dp.getBill());
+    // System.out.println("Bill DP is Paid? : " + dp.isPaid());
+
+     // pembayaran pertama
     dp.pay(60000);
+    System.out.println("Change dp 1: " + dp.getChange());
+
+    dp.pay(30000);
+    System.out.println("Change dp 2: " + dp.getChange());
+
+    dp.pay(50000);
     System.out.println("Bill DP: " + dp.getBill());
-    System.out.println("Bill DP is Paid? : " + dp.isPaid());
+    System.out.println("Bill DP Is Paid? : " + dp.isPaid());
+    System.out.println("Change dp 3: " + dp.getChange());
+  
   }
 }
   

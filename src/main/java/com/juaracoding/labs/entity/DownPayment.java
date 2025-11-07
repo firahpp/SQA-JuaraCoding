@@ -1,7 +1,7 @@
 package com.juaracoding.labs.entity;
 
 public class DownPayment extends Payment {
-    private int remaind;
+   
     
     public DownPayment(String id, int toBePaid, boolean isPaid) {
     super(id, toBePaid, isPaid);
@@ -13,8 +13,9 @@ public class DownPayment extends Payment {
         if (getBill() > total) {
       setBill(getBill() - total);
     } else {
-      setBill(0);
-      setPaid(true);
+        setChange(total - getBill());
+        setBill(0);
+        setPaid(true);
     }
 
         // 120000

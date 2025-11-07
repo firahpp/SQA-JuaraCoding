@@ -5,6 +5,7 @@ public class Payment {
     private int toBePaid;
     private boolean isPaid;
     private int bill;
+    private int change;
     private String paymentType;
 
     public Payment(String id, int toBePaid, boolean isPaid) { //constructor
@@ -61,6 +62,14 @@ public class Payment {
 
     public void setBill(int bill) {
         this.bill = bill;
+    }
+
+    public int getChange() {
+        return change;
+    }
+
+    public void setChange(int change) {
+        this.change = change;
     }
     
 }
