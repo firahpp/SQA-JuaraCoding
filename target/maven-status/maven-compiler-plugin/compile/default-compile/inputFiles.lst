@@ -1,8 +1,11 @@
 /Users/fauzanfr/mpir/JuaraCoding/SQABatch25/java-labs/src/main/java/com/juaracoding/labs/App.java
 /Users/fauzanfr/mpir/JuaraCoding/SQABatch25/java-labs/src/main/java/com/juaracoding/labs/ReverseArray.java
 /Users/fauzanfr/mpir/JuaraCoding/SQABatch25/java-labs/src/main/java/com/juaracoding/labs/entity/Barang.java
+/Users/fauzanfr/mpir/JuaraCoding/SQABatch25/java-labs/src/main/java/com/juaracoding/labs/entity/Cash.java
 /Users/fauzanfr/mpir/JuaraCoding/SQABatch25/java-labs/src/main/java/com/juaracoding/labs/entity/Customer.java
 /Users/fauzanfr/mpir/JuaraCoding/SQABatch25/java-labs/src/main/java/com/juaracoding/labs/entity/DetailPesanan.java
+/Users/fauzanfr/mpir/JuaraCoding/SQABatch25/java-labs/src/main/java/com/juaracoding/labs/entity/DownPayment.java
+/Users/fauzanfr/mpir/JuaraCoding/SQABatch25/java-labs/src/main/java/com/juaracoding/labs/entity/Payment.java
 /Users/fauzanfr/mpir/JuaraCoding/SQABatch25/java-labs/src/main/java/com/juaracoding/labs/entity/Pesanan.java
 /Users/fauzanfr/mpir/JuaraCoding/SQABatch25/java-labs/src/main/java/com/juaracoding/labs/entity/User.java
 /Users/fauzanfr/mpir/JuaraCoding/SQABatch25/java-labs/src/main/java/com/juaracoding/labs/entity/Voucher.java
