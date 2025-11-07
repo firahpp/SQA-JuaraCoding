@@ -3,6 +3,7 @@ com/juaracoding/labs/App.class
 com/juaracoding/labs/entity/Barang.class
 com/juaracoding/labs/entity/Pesanan.class
 com/juaracoding/labs/ReverseArray.class
+com/juaracoding/labs/entity/User.class
 com/juaracoding/labs/entity/userTest.class
 com/juaracoding/labs/entity/Voucher.class
 com/juaracoding/labs/entity/DetailPesanan.class
